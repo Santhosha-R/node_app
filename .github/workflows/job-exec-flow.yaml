@@ -12,6 +12,7 @@ jobs:
 
   job2:
     needs: job1
+    if: ${{ always()}}
     runs-on: ubuntu-latest
     steps:
       - name: job2
@@ -19,6 +20,7 @@ jobs:
 
   job3:
     needs: job2
+    if: ${{ always()}}
     runs-on: ubuntu-latest
     steps:
       - name: job3
