@@ -1,0 +1,23 @@
+name: sequential jobs
+
+on: workflow_dispatch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - nmae: job1
+        run: sleep 3
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - nmae: job2
+        run: sleep 3
+
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - nmae: job3
+        run: sleep 3
+
