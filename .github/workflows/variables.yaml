@@ -51,3 +51,12 @@ jobs:
       - name: JOB2 variable
         run: |
           echo  "JOB2 variable is : $JOB2"
+
+  job3:
+    runs-on: ubuntu-latest
+"
+    steps:
+      - name: Print Repo secrets and variables
+        run: |
+          echo  "git repo secret is : ${{ secrets.SECRET_KEY }}"
+          echo  "git repo variable is : ${{ vars.SECRET_VARIABLE }}"
