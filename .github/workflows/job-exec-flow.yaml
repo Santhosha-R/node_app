@@ -7,18 +7,18 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - nmae: job1
+      - name: job1
         run: sleep 3
 
   job2:
     runs-on: ubuntu-latest
     steps:
-      - nmae: job2
+      - name: job2
         run: sleep 3
 
   job3:
     runs-on: ubuntu-latest
     steps:
-      - nmae: job3
+      - name: job3
         run: sleep 3
 
