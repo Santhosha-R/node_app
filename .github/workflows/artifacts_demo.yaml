@@ -1,4 +1,42 @@
-name: artifacts
+# name: artifacts
+
+# on:
+#   workflow_dispatch:
+
+# jobs:
+#   job1:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: create directory
+#         run: |
+#           mkdir build
+#           echo "This is job1 ./build/info.txt file content" > ./build/info.txt
+
+#       - name: upload the build folder to artifact
+#         uses: actions/upload-artifact@v7
+#         with:
+#           name: build-artifact
+#           path: build/
+
+#   job2:
+#     needs: job1
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: download the build folder from repo artifact
+#         uses: actions/download-artifact@v8
+#         with:
+#           name: build-artifact
+#           path: ./demo
+
+#       - name: display the content of downloaded file
+#         run: |
+#           ls -lart ./demo
+#           cat ./demo/info.txt 
+
+# ===============================================================
+name: arti-facts
 
 on:
   workflow_dispatch:
@@ -8,29 +46,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: create directory
+      - name: create folder
         run: |
-          mkdir build
-          echo "This is job1 ./build/info.txt file content" > ./build/info.txt
+          mkdir demo
+          echo "****this is the content of the folder demo from job1**** " > text.txt
 
-      - name: upload the build folder to artifact
+      - name: uploadfolder to artifact
         uses: actions/upload-artifact@v7
         with:
-          name: build-artifact
-          path: build/
+          name: demo-artifact
+          path: demo/
 
   job2:
-    needs: job1
     runs-on: ubuntu-latest
 
     steps:
-      - name: download the build folder from repo artifact
+      - name: download folder from artifact
         uses: actions/download-artifact@v8
         with:
-          name: build-artifact
-          path: ./demo
+          name: demo-artifact
+          path: ./tejasthu/text.txt
 
-      - name: display the content of downloaded file
+      - name: display the output
         run: |
-          ls -lart ./demo
-          cat ./demo/info.txt 
+          ls -lart ./tejasthu
+          cat ./tejasthu/text.txt
+
+
