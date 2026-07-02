@@ -65,7 +65,7 @@ jobs:
       - name: download folder from artifact
         uses: actions/download-artifact@v8
         with:
-          # run-id: 28604955018
+          run-id: 28604955018
           name: demo-artifact
           path: ./tejasthu
 
