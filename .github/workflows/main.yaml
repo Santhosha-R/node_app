@@ -5,6 +5,7 @@ on:
 
 jobs:
   calling-build workflow:
+    runs-on: ubuntu-latest
     steps:
       - name: calling build flow
         uses: ./.github/workflows/build.yaml
