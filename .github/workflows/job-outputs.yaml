@@ -4,9 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-
   job1:
-
     runs_on: ubuntu-latest
 
     steps:
@@ -16,4 +14,4 @@ jobs:
         run: echo "msg= its from step1" >> $GITHUB_OUTPUT
       
       - name: get step1 variable
-        run: echo "output from step1 ====> ${{ steps.step1.output.msg }}"
+        run: echo "output from step1 ====> ${{ steps.step1.outputs.msg }}"
