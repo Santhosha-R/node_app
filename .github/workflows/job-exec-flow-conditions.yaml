@@ -1,11 +1,11 @@
-name: job execution based on conditions
+name: selective jobs (job execution based on conditions)
 
 on:
   workflow_dispatch:
     inputs:
       job_to_run:
         description: 'which job to run'
-        required: false
+        required: true
         type: choice
         options:
           - job1
