@@ -16,7 +16,7 @@ jobs:
       - name: upload the build folder to artifact
         uses: actions/upload-artifact@v7
         with:
-          name: upload artifact
+          name: build-artifact
           path: build/
 
   job2:
@@ -27,7 +27,7 @@ jobs:
       - name: download the build folder from repo artifact
         uses: actions/download-artifact@v8
         with:
-          name: download artifact
+          name: build-artifact
           path: ./demo
 
       - name: display the content of downloaded file
