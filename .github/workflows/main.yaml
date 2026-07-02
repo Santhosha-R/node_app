@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-build:
-    
-    uses: ./.github/workflows/build.yaml
+  calling-build workflow:
+    steps:
+      - name: calling build flow
+        uses: ./.github/workflows/build.yaml
