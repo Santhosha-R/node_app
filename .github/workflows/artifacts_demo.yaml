@@ -29,7 +29,7 @@ jobs:
           - name: download artifact
             path: ./demo
 
-      - name: display the content of downloaded file
-        run: |
-          ls -lart ./demo
-          cat ./demo/info.txt 
+          - name: display the content of downloaded file
+            run: |
+              ls -lart ./demo
+              cat ./demo/info.txt 
