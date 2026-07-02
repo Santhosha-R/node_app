@@ -40,7 +40,7 @@ jobs:
       - name: get step1 variable
         run: echo "output from step1 ====> ${{ steps.step1.outputs.msg }}"
 
-  job1:
+  job2:
     needs: job1
     runs-on: ubuntu-latest
 
