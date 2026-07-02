@@ -5,5 +5,5 @@ on:
 
 jobs:
   call-build:
-    - name: calling the build.yaml
-      uses: ./.github/workflows/build.yaml
+    
+    uses: ./.github/workflows/build.yaml
