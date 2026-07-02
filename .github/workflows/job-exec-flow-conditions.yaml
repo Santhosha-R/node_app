@@ -5,7 +5,7 @@ on:
     inputs:
       job_to_run:
         description: 'which job to run'
-        required: true
+        required: false
         type: choice
         options:
           - job1
