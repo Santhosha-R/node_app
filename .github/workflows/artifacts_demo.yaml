@@ -36,35 +36,36 @@
 #           cat ./demo/info.txt 
 
 # ===============================================================
-name: arti-facts
+# name: arti-facts
 
-on:
-  workflow_dispatch:
+# on:
+#   workflow_dispatch:
 
-jobs:
-  job1:
-    runs-on: ubuntu-latest
+# jobs:
+#   job1:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: create folder
-        run: |
-          mkdir demo
-          echo "****this is the content of the folder demo from job1**** " > ./demo/text.txt
+#     steps:
+#       - name: create folder
+#         run: |
+#           mkdir demo
+#           echo "****this is the content of the folder demo from job1**** " > ./demo/text.txt
 
-      - name: upload folder to artifact
-        uses: actions/upload-artifact@v7
-        with:
-          name: demo-artifact
-          path: demo/
+#       - name: upload folder to artifact
+#         uses: actions/upload-artifact@v7
+#         with:
+#           name: demo-artifact
+#           path: demo/
 
   job2:
-    needs: job1
+    # needs: job1
     runs-on: ubuntu-latest
 
     steps:
       - name: download folder from artifact
         uses: actions/download-artifact@v8
         with:
+          # run-id: 28604955018
           name: demo-artifact
           path: ./tejasthu
 
