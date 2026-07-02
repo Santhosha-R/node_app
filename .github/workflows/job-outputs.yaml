@@ -38,6 +38,7 @@ jobs:
         run: echo "msg= DATA2" >> $GITHUB_OUTPUT
 
       - name: get step1 variable
+        id: step3
         run: echo "output from step1 ====> ${{ steps.step1.outputs.msg }}"
 
   job2:
