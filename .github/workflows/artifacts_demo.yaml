@@ -49,7 +49,7 @@ jobs:
       - name: create folder
         run: |
           mkdir demo
-          echo "****this is the content of the folder demo from job1**** " > text.txt
+          echo "****this is the content of the folder demo from job1**** " > ./demo/text.txt
 
       - name: upload folder to artifact
         uses: actions/upload-artifact@v7
