@@ -1,0 +1,35 @@
+name: artifacts
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    step1:
+      - name: create directory
+        run: |
+          mkdir build
+          echo "This is job1 ./build/info.txt file content" > ./build/info.txt
+
+      - name: upload the build folder to artifact
+        uses: actions/upload-artifact@v7
+        with:
+          - name: upload artifact
+            path: build/
+
+  job2:
+    runs-on: ubuntu-latest
+
+    step1:
+      - name: download the build folder from repo artifact
+        uses: actions/download-artifact@v8
+        with:
+          - name: download artifact
+            path: ./demo
+
+      - name: display the content of downloaded file
+        run: |
+          ls -lart ./demo
+          cat ./demo/info.txt 

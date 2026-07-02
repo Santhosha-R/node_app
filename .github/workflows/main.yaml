@@ -1,9 +1,0 @@
-name: Main Workflow
-
-on:
-  workflow_dispatch:
-
-jobs:
-  call-build-workflow:
-    
-    uses: ./.github/workflows/build.yaml
