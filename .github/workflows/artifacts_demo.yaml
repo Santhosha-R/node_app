@@ -68,6 +68,7 @@ jobs:
           run-id: 28604955018
           name: demo-artifact
           path: ./tejasthu
+          github-token: ${{ secrets.GIT_TOKEN }}
 
       - name: display the output
         run: |
