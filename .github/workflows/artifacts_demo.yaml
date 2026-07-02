@@ -51,7 +51,7 @@ jobs:
           mkdir demo
           echo "****this is the content of the folder demo from job1**** " > text.txt
 
-      - name: uploadfolder to artifact
+      - name: upload folder to artifact
         uses: actions/upload-artifact@v7
         with:
           name: demo-artifact
