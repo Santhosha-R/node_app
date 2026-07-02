@@ -4,8 +4,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  calling-build workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - name: calling build flow
-        uses: ./.github/workflows/build.yaml
+  call-build-workflow:
+    
+    uses: ./.github/workflows/build.yaml
