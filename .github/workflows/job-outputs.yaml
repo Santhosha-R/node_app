@@ -45,6 +45,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: set a variable
-        id: step1
+      - name: get the data from job1
         run: echo "output from job1 is ===> ${{ needs.job1.outputs.job1_output }}"
