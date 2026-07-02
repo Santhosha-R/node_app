@@ -36,12 +36,12 @@
 #           cat ./demo/info.txt 
 
 # ===============================================================
-# name: arti-facts
+name: arti-facts
 
-# on:
-#   workflow_dispatch:
+on:
+  workflow_dispatch:
 
-# jobs:
+jobs:
 #   job1:
 #     runs-on: ubuntu-latest
 
