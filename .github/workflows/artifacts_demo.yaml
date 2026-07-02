@@ -65,7 +65,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: demo-artifact
-          path: ./tejasthu/text.txt
+          path: ./tejasthu
 
       - name: display the output
         run: |
