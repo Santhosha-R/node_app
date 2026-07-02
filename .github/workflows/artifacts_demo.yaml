@@ -7,7 +7,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
 
-    step1:
+    steps:
       - name: create directory
         run: |
           mkdir build
@@ -22,7 +22,7 @@ jobs:
   job2:
     runs-on: ubuntu-latest
 
-    step1:
+    steps:
       - name: download the build folder from repo artifact
         uses: actions/download-artifact@v8
         with:
