@@ -20,7 +20,7 @@ jobs:
           echo "no cache yet, slow operation started!!"
           sleep 25
           mkdir data
-          echo "some data" > /data/text.txt
+          echo "some data" > data/text.txt
           echo "slow operation completed"
 
       - name: read the file
