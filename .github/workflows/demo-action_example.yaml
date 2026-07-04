@@ -1,4 +1,4 @@
-name: demo custom action
+name: demo composite action
 
 on: workslow_dispatch
 
@@ -14,4 +14,4 @@ jobs:
           whom-to-greet: "Tejasthu"
 
       - name: display demo output
-        run: "output = ${{steps.demo.outputs.result}}"
+        run: echo "output = ${{steps.demo.outputs.result}}"
