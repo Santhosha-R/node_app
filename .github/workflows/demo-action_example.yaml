@@ -7,15 +7,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: checkout code
-        uses: actions/checkout@v7
-        
+        uses: actions/checkout@v4
+
       - name: run the demo action
         id: demo
-        uses: ./.github/actions/demo/actions.yaml
+        uses: ./.github/actions/demo
         with:
           whom-to-greet: "Tejasthu"
 
       - name: display demo output
-        run: echo "output= ${{steps.demo.outputs.result}}"
+        run: echo "output=${{ steps.demo.outputs.result }}"
