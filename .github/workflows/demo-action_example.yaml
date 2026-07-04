@@ -1,6 +1,6 @@
 name: demo composite action
 
-on: workslow_dispatch
+on: workflow_dispatch
 
 jobs:
   job1:
@@ -14,4 +14,4 @@ jobs:
           whom-to-greet: "Tejasthu"
 
       - name: display demo output
-        run: echo "output = ${{steps.demo.outputs.result}}"
+        run: echo "output= ${{steps.demo.outputs.result}}"
