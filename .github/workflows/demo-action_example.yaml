@@ -12,7 +12,7 @@ jobs:
 
       - name: run the demo action
         id: demo
-        uses: ./.github/actions/demo/
+        uses: ./.github/actions/demo
         with:
           whom-to-greet: "Tejasthu"
 
