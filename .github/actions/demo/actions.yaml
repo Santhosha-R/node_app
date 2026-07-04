@@ -1,32 +1,3 @@
-name: 'demo-action'
-
-description: 'it is a simple composite file for greet someone'
-
-inputs:
-  whom-to-greet:  # Name of the input
-    description: 'name of the person you want to greet'
-    required: false
-    default: 'hellow-world'
-  
-outputs:
-  demo-output:
-    description: 'Result from the costum action'
-    value: ${{ steps.set_output.outputs.result }}
-
-
-runs:
-  using: 'composite'
-
-  steps:
-    - name: greet
-      run: echo "Hello ${{ inputs.whom-to-greet }}"
-      shell: bash
-
-    - name: set output
-      id: set_output
-      run: echo "result=success" >> $GITHUB_OUTPUT
-      shell: bash
-_______________________________
 name: 'Demo Action'
 
 description: 'Its a simple composite file to greet someone'
@@ -49,6 +20,8 @@ runs:
     - name: Greet
       run: echo "Hello ${{ inputs.who-to-greet }} !!"
       shell: bash
+
+
 
     - name: Set Output
       id: set_output

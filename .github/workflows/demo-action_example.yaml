@@ -1,22 +1,21 @@
-name: demo composite action
+name: Demo Composite Action
 
 on: workflow_dispatch
 
+
 jobs:
-  job1:
-    runs-on: ubuntu-latest
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v7
 
-    steps:
-      - name: checkout code
-        uses: actions/checkout@v4
+            - name: Run the demo action
+              id: demo
+              uses: ./.github/actions/demo
+              with:
+                who-to-greet: "Tejasthu"
 
-      - name: run the demo action
-        id: demo
-        uses: ./.github/actions/demo
-        with:
-          whom-to-greet: "Tejasthu"
 
-      - name: display demo output
-        run: echo "output ${{ steps.demo.outputs.demo-output }}"
-
-   
+            - name: Display the output
+              run: echo "Output ${{steps.demo.outputs.demo-output}}" 
