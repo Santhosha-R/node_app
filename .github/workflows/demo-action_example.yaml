@@ -8,14 +8,14 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v7
+              uses: actions/checkout@v4
 
             - name: Run the demo action
               id: demo
-              uses: ./NODE_APPLICATIONS/.github/actions/demo
+              uses: ./.github/actions/demo
               with:
                 who-to-greet: "Tejasthu"
 
 
             - name: Display the output
-              run: echo "Output ${{steps.demo.outputs.demo-output}}" 
+              run: echo "Output ${{ steps.demo.outputs.demo-output }}" 
