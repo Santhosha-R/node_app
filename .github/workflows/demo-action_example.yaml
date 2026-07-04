@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: run the demo action
         id: demo
-        uses: ./.github/actions/demo/actions
+        uses: ./.github/actions/demo/actions.yaml
         with:
           whom-to-greet: "Tejasthu"
 
