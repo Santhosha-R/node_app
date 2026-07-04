@@ -1,0 +1,17 @@
+name: demo custom action
+
+on: workslow_dispatch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: run the demo action
+        id: demo
+        uses: ./.github/actions/demo/actions
+        with:
+          whom-to-greet: "Tejasthu"
+
+      - name: display demo output
+        run: "output = ${{steps.demo.outputs.result}}"
