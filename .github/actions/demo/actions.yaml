@@ -50,8 +50,6 @@ runs:
       run: echo "Hello ${{ inputs.who-to-greet }} !!"
       shell: bash
 
-
-
     - name: Set Output
       id: set_output
       run: echo "result=Success" >> $GITHUB_OUTPUT

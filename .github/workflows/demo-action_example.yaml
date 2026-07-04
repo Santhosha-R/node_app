@@ -17,4 +17,6 @@ jobs:
           whom-to-greet: "Tejasthu"
 
       - name: display demo output
-        run: echo "output=${{ steps.demo.outputs.result }}"
+        run: echo "output ${{ steps.demo.outputs.demo-output }}"
+
+   
